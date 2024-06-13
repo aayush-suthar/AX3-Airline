@@ -1,0 +1,12 @@
+.Flight_Book_Parent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #343a40;
+    margin-top: 1px;
+    box-sizing: border-box;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+

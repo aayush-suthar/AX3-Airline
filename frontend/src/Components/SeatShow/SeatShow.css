@@ -1,0 +1,15 @@
+.SeatShow_Seats{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.SeatShow_row{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.SeatShow_Info , .Seat_Book_Look , .Seat_Not_Book_Look{
+    display: flex;
+}
