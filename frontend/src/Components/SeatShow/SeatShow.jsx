@@ -33,8 +33,8 @@ const SeatShow = ({items , user_info , getSeat}) => {
     <div className='SeatShow_Parent'>
       
     <div className='SeatShow_Info'>
-        <div className='Seat_Book_Look'><Seat booked = {0} seatchar = {''} seatindex={''}/> <span> : Booked</span> </div>
-        <div className='Seat_Not_Book_Look'><Seat booked = {1} seatchar = {''} seatindex={''}/> <span> : Available</span> </div>
+        <div className='Seat_Book_Look'><Seat booked = {1} seatchar = {''} seatindex={''}/> <span> : Booked</span> </div>
+        <div className='Seat_Not_Book_Look'><Seat booked = {0} seatchar = {''} seatindex={''}/> <span> : Available</span> </div>
         <div className="Seat_Selected"><span>Selected Seat : </span>{selectedSeats}</div>
         <div className="Seat_DeSelect" onClick={handleSeatDeSelect}>deselect</div>
     </div>

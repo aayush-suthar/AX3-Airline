@@ -24,7 +24,7 @@ const FlightUserDetails = ({ items, user_info }) => {
           <div><img className='Flight_Card_Little_Plane' width={20} src="https://cdn.iconscout.com/icon/free/png-512/free-airplane-12-84063.png?f=webp&w=256" alt="" /></div>
           </div>
 
-
+ 
 
           <div className="Book_Arrive">
             <div className='Book_Arrive_Time'>{items.Arrival_Time}</div>

@@ -28,6 +28,7 @@
     height: 70%;
     width: 100%;
     justify-content: center;
+    text-align: center;
 }
 
 .Book_Depart , .Book_Arrive{
@@ -82,7 +83,7 @@
 .Book_User_details{
     width: 100%;
     text-align: center;
-    font-size: 60px;
+    font-size: 60px; 
 }
 
 .Book_User_Name , .Book_User_Email ,.Book_User_Phone{

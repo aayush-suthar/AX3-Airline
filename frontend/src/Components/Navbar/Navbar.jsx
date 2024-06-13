@@ -18,6 +18,6 @@ const Navbar = ({ user_info }) => {
       </div>
     </div> 
   );
-}; 
+};  
 
 export default Navbar; 

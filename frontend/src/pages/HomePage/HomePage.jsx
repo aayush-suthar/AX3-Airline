@@ -6,7 +6,10 @@ import './HomePage.css';
 const HomePage = () => {
   
   const {state} = useLocation()
-  const user_info = state.user_info
+  let user_info = null 
+  if(state){
+    user_info = state.user_info
+  }
   return (
     <>
     <Navbar user_info = {user_info}/>
@@ -15,7 +18,7 @@ const HomePage = () => {
         <h1>Welcome to the Airline Website</h1>
       </div>
     </div>
-    </>
+    </> 
   );
 };
 

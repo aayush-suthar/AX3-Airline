@@ -12,7 +12,7 @@ const LoginPage = () => {
     const { name, value } = e.target;
     setCredentials(prevState => ({ ...prevState, [name]: value }));
   };
- 
+  
   const handleSubmit = async (e) => { 
     e.preventDefault();
     const postData = {email : credentials.email , password : credentials.password}
@@ -25,7 +25,7 @@ const LoginPage = () => {
         body: JSON.stringify(postData),
       });
 
-      if (!response.ok) {
+      if (!response.ok) { 
         throw new Error('Network response was not ok.');
       }
       const responseData = await response.json();

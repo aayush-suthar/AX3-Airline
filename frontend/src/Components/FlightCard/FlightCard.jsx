@@ -24,7 +24,7 @@ const FlightCard = ({items , user_info}) => {
 
 
           <div className='Flight_Card_Pic'>
-          <div className='Fligh_Card_Duration'>duration</div>
+          <div className='Fligh_Card_Duration'>duration will set later</div>
           <div className='Flight_Card_Single_Line'></div>
           <div><img className='Flight_Card_Little_Plane' width={20} src="https://cdn.iconscout.com/icon/free/png-512/free-airplane-12-84063.png?f=webp&w=256" alt="" /></div>
           </div>
@@ -35,7 +35,7 @@ const FlightCard = ({items , user_info}) => {
             <div className='Flight_Card_City'>
             <span>{items.Arrival_City_Code} &nbsp;</span>
             <span>{items.Arrival_City_Name}</span>
-            </div>
+            </div> 
             <div className='Flight_Card_Airport'>{items.Arrival_City_Airport}</div>
           </div>
         </div>

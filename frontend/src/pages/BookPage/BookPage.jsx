@@ -8,6 +8,13 @@ import Payment from '../../Components/Payment/Payment'
 
 const BookPage = () => {
   const { state } = useLocation();
+  if(state.pass_user_info == null){
+    return (
+      <>
+      phele login kar
+      </>
+    )
+  }
   const items = state.pass_items
   const user_info = state.pass_user_info
   
