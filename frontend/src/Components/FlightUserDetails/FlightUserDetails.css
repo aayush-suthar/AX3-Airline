@@ -9,7 +9,7 @@
 .Book_Flight{
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 70%; 
     height: 100%;
 }
 
@@ -92,4 +92,63 @@
     word-wrap: break-word;
     font-size: 25px;
     margin: 25px 0;
+}
+
+
+@media(width < 1000px){
+ .Book_Parent{
+    flex-direction: column;  
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 619px;
+ }
+ .Book_Flight{
+    width: 100%;
+ }
+ .Book_Flight_Num{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+ }
+ .Book_Flight_Amount{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    box-sizing: border-box;
+}
+.Book_Flight_Amount img{
+    width: 60px;
+}
+.Book_User{ 
+    flex-direction: row;
+    width: 100%;
+}
+ 
+}
+
+@media(width < 750px){
+    .Book_User{
+        flex-direction: column;
+        width: 100%;
+    }
+    .Book_Parent{
+        height: 1000px;
+    }
+}
+
+@media(width < 650px){
+    .Book_Flight_Detail{
+        flex-direction: column;
+    }
+    .Book_Depart , .Book_Arrive , .Book_Pic{
+        width: 100%;
+    }
+    .Book_Pic{
+        margin: 30px 0;
+    }
+    .Book_Flight_Num{
+        margin-bottom: 10px;
+    }
 }

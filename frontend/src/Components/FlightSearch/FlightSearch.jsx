@@ -14,7 +14,7 @@ const FlightSearch = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault();  
     // Handle search logic here
   };
 

@@ -6,17 +6,15 @@
     margin-bottom: 20px;
   }
   
-  .flight-search input,
-  .flight-search select {
+  .flight-search input, .flight-search select {
     width: calc(33.333% - 20px);
     padding: 10px;
-    margin-right: 20px;
+    margin-right: 20px; 
     border: 1px solid #ccc;
     border-radius: 4px;
   }
   
-  .flight-search input:last-child,
-  .flight-search select:last-child {
+  .flight-search input:last-child, .flight-search select:last-child {
     margin-right: 0;
   }
   
@@ -33,12 +31,14 @@
   .flight-search button:hover {
     background-color: #0056b3;
   }
-  
+   
   @media (max-width: 768px) {
-    .flight-search input,
-    .flight-search select {
+    .flight-search input, .flight-search select {
       width: 100%;
       margin-bottom: 10px;
     }
   }
+
+
+  
   

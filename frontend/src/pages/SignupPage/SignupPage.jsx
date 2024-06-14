@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './SignupPage.css';
+import Navbar from '../../Components/Navbar/Navbar';
+const SignupPage = () => {
 
-const SignupPage = ({ setIsAuthenticated }) => {
   const [formData, setFormData] = useState({
     name: '', 
     username:'',
@@ -9,6 +10,8 @@ const SignupPage = ({ setIsAuthenticated }) => {
     password: '',
     phoneNumber: '' 
   }); 
+
+  const [user , setuser] = useState({})
   
   const handleChange = (e) => {
     const { name, value } = e.target; 
@@ -18,12 +21,12 @@ const SignupPage = ({ setIsAuthenticated }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const postData = {name : formData.name , email : formData.email , password : formData.password , phone : formData.phoneNumber , username : formData.username} 
-    try{
+    try{ 
       const response = await fetch('http://localhost:3001/signup' , {
         method: 'POST',
         headers: { 
           'Content-Type' : 'application/json',
-        },
+        }, 
         body : JSON.stringify(postData),
       });
 
@@ -32,7 +35,7 @@ const SignupPage = ({ setIsAuthenticated }) => {
       }
 
       const responseData = await response.text();
-      console.log(responseData);
+      setuser(responseData)
     }catch(error){
       console.log("Error in SignIn : " , error)
     }
@@ -41,6 +44,8 @@ const SignupPage = ({ setIsAuthenticated }) => {
   };
 
   return (
+    <>
+      <Navbar user_info ={user}/>
     <div className="signup-page">
       <form className="signup-form" onSubmit={handleSubmit}>
         <div className="signup-container">
@@ -79,7 +84,7 @@ const SignupPage = ({ setIsAuthenticated }) => {
             placeholder="Password"
             className="signup-input"
             required
-          />
+            />
           <input
             type="tel"
             name="phoneNumber"
@@ -93,6 +98,7 @@ const SignupPage = ({ setIsAuthenticated }) => {
         </div>
       </form>
     </div>
+            </>
   );
 };
 

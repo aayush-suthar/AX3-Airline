@@ -1,14 +1,13 @@
 import React from 'react'
 import './Payment.css'
 
-const Payment = (items , selected_seat , user_info) => {
-
+const Payment = ({items , selected_seat , user_info , Update_Book_Page}) => {
     const HandlePayment = async (e)=>{
-        if(selected_seat == 'none'){
-            alert('Select Seat')
+        if(selected_seat === 'none'){
+            alert("Select Seat")
         }else{
             e.preventDefault();
-            const postData = {user_info , items , selected_seat}
+            const postData = {user_info , items , selected_seat} 
             try {
               const response = await fetch('http://localhost:3001/book_flight', {
                 method: 'POST',
@@ -17,13 +16,15 @@ const Payment = (items , selected_seat , user_info) => {
                   },
                 body: JSON.stringify(postData),
               });
-        
+         
               if (!response.ok) {
                 throw new Error('Network response was not ok.');
               }
               const responseData = await response.json();
               if(responseData){
                 alert('Flight Succesfully Booked')
+                Update_Book_Page()
+                
             }else{
                 alert("Error While Booking") 
             }
@@ -36,11 +37,11 @@ const Payment = (items , selected_seat , user_info) => {
 
         }
     }
-
+ 
   return (
     <div className='Payment_Parent'>
-      <div className='Payment_Total'>Total  : {items.Price} </div>
-      <div className='Playment_Make' onClick={HandlePayment}>Pay</div>
+      <div className='Payment_Total'>Total Amount : {items.Price} </div>
+      <div className='Payment_Make' onClick={HandlePayment}><span>Pay</span></div>
     </div>
   )
 }

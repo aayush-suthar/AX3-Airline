@@ -7,16 +7,16 @@ import rupee from '../../assets/FlightCardPics/rupee.svg';
 
 const FlightCard = ({items , user_info}) => {
 
-  return (
+  return ( 
     <div>
-  
+   
       <div className='Flight_Card_Parent'>
 
         <div className='Flight_Card_From_To'>
           <div className='Flight_Card_Location'>
             <div className='Flight_Card_Time'>{items.Departure_Time}</div>
             <div className='Flight_Card_City'>
-            <span>{items.Departure_City_Code} &nbsp;</span>
+            <span>{items.Departure_City_Code}</span>
             <span>{items.Departure_City_Name}</span>
             </div>
             <div className='Flight_Card_Airport'>{items.Departure_City_Airport}</div>
@@ -42,18 +42,20 @@ const FlightCard = ({items , user_info}) => {
 
 
 
+      <div className='Flight_Amount_Num'>
 
         <div className='Flight_Card_Number'>
-          <div className='Flight_Card_Flight_Num'><div className="Flight_Card_plane_pic"><img src={plane_logo} alt="" /></div> &ensp;{items.Num}</div>
+          <div className='Flight_Card_Flight_Num'><div className="Flight_Card_plane_pic"><img src={plane_logo} alt="" /></div> &ensp;<span>{items.Num}</span></div>
         </div>
 
 
 
- 
+  
         <div className='Flight_Card_Price'>
           <div className="Flight_Card_Amount"><img src={rupee} alt="" />{items.Price}</div>
           <Link to='/booknow' state = {{pass_items : items , pass_user_info : user_info}}><div className="Flight_Card_Book">Book Now</div></Link>
         </div>
+      </div>
 
       </div>
 

@@ -3,7 +3,8 @@
 const mongoose = require('mongoose');
 
 const PartialFlightInfo = new mongoose.Schema({
-  Num: { type: String, required: true, unique: true },
+  _id: { type: mongoose.Schema.Types.ObjectId, required: true },
+  Num: { type: String, required: true},
   Departure_City_Code: { type: String, required: true },
   Departure_City_Name: { type: String, required: true },
   Departure_City_Airport: { type: String, required: true },
@@ -12,12 +13,12 @@ const PartialFlightInfo = new mongoose.Schema({
   Arrival_City_Airport: { type: String, required: true },
   Departure_Date: { type: String, required: true },
   Departure_Time: { type: String, required: true },
-  Arrival_Date: { type: String, required: true },
+  Arrival_Date: { type: String, required: true }, 
   Arrival_Time: { type: String, required: true },
   Price: { type: Number, required: true },
   Seat : {type : String , required : true}
 })
-
+ 
 const userSchema = new mongoose.Schema({
   name: { type: String, required: true }, 
   email: { type: String, required: true, unique: true },

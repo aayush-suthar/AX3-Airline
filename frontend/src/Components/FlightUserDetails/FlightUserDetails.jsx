@@ -17,7 +17,7 @@ const FlightUserDetails = ({ items, user_info }) => {
             <div className='Book_Depart_Airport'>{items.Departure_City_Airport}</div>
           </div>
 
-
+ 
           <div className="Book_Pic">
           <div className='Book_Duration'>duration</div>
           <div className='Book_Single_Line'></div>
@@ -41,7 +41,7 @@ const FlightUserDetails = ({ items, user_info }) => {
         <div className='Book_User_Email'>{user_info.email}</div>
         <div className='Book_User_Phone'>{user_info.phone}</div>
       </div>
-
+ 
     </div>
   )
 }
