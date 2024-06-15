@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import './ProfilePage.css'; 
 import Navbar from '../../Components/Navbar/Navbar';
  
@@ -16,6 +16,7 @@ const ProfilePage = ({ user_info }) => {
 
   const { email, password } = user_info;
   const [flights, setFlights] = useState([]);
+  const [temp, settemp] = useState(0)
 
   const fetchUpcomingFlights = async () => {
     try {
@@ -48,6 +49,7 @@ const ProfilePage = ({ user_info }) => {
         body: JSON.stringify(postData),
       });
       console.log(response)
+      settemp(temp+1)
       if (!response.ok) {
         throw new Error('Failed to fetch flights');
       }
@@ -58,6 +60,12 @@ const ProfilePage = ({ user_info }) => {
     }
   }
 
+  useEffect(() => {
+    fetchUpcomingFlights()
+  }, [temp])
+  
+
+ 
   return (
     <>
     <Navbar user_info={user_info}/>

@@ -7,7 +7,7 @@ const SignupPage = () => {
     name: '', 
     username:'',
     email: '',
-    password: '',
+    password: '', 
     phoneNumber: '' 
   }); 
 
@@ -17,7 +17,7 @@ const SignupPage = () => {
     const { name, value } = e.target; 
     setFormData(prevState => ({ ...prevState, [name]: value }));
   };
-//CHANGE --> ADDED FUNCTION
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const postData = {name : formData.name , email : formData.email , password : formData.password , phone : formData.phoneNumber , username : formData.username} 
@@ -35,6 +35,7 @@ const SignupPage = () => {
       }
 
       const responseData = await response.text();
+      alert("Now Login")
       setuser(responseData)
     }catch(error){
       console.log("Error in SignIn : " , error)
