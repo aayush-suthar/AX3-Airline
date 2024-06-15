@@ -1,11 +1,20 @@
 .Payment_Parent{
     width: 95%;
-    height: 100px;
     display: flex;
+    flex-direction: column;
     margin-bottom: 50px;
     font-size: 35px;
     border: 1px solid black;
     box-shadow: 0 0 10px black;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.Payment_Parent input{
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #cdcdcd;
 }
 
 .Payment_Total{
@@ -16,31 +25,56 @@
 }
 
 .Payment_Make{
-    width: 30%;
+    width: 30%; 
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
 }
 
-.Payment_Make:hover span{
-    animation-name: click_me;
-    animation-iteration-count: 1000;
-    animation-duration: 1s;
+.Payment_Payment:hover{
+    background-color: green;
+    color: white;
 }
 
-@keyframes click_me{
-    0%{border-top: 5px solid green;
-        border-radius: 50%;
-    }
-    25%{border-right: 1px solid green;
-    border-radius: 50%;}
-    50%{border-bottom: 5px solid green;
-    border-radius: 50%;}
-    75%{border-left: 1px solid green;
-    border-radius: 50%;}
-    100%{
-        border-top: 1px solid green;
-        border-radius: 50%;
-    }   
-    }
+.Payment_Card_Detail{
+    display: flex;
+    width: 100%;
+    gap: 5px;
+}
+.Payment_Card_Detail div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.Payment_Card_Detail input{
+    padding: 10px 0;
+    width: 100%;
+    height: 100%;
+}
+
+.Payment_Card_Expiry{
+    display: flex;
+    width: 100%;
+    gap: 5px;
+}
+
+.Payment_Card_Expiry div{
+    width: 33.333333333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Payment_Card_Expiry input{
+    padding: 10px 0;
+    width: 100%;
+    height: 100%;
+}
+
+.Payment_Payment{
+    display: flex;
+    width: 100%;
+}
+
